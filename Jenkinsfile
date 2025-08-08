@@ -143,7 +143,7 @@ pipeline {
                 //withCredentials([[
                     //$class: 'AmazonWebServicesCredentialsBinding',
                     //credentialsId: 'aws-secret'
-                 {
+                 //]]) {
                     script {
                         dir('Kubernetes') {
                             withKubeConfig(
