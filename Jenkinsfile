@@ -140,9 +140,9 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                withCredentials([[
-                    $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'aws-secret'
+                //withCredentials([[
+                    //$class: 'AmazonWebServicesCredentialsBinding',
+                    //credentialsId: 'aws-secret'
                 ]]) {
                     script {
                         dir('Kubernetes') {
@@ -175,3 +175,4 @@ pipeline {
     }
 
 }
+
